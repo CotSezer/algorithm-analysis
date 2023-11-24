@@ -20,7 +20,7 @@ The core of the analysis lies in the `process_array` function. It navigates thro
 ## How to Run
 
 1. Ensure Python is installed on your system.
-2. Run the script using the command: python3 `array_processing.py`.
+2. Run the script using the command: `python3 array_processing.py`.
 
 ## Results
 
