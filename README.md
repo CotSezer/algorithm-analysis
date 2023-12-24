@@ -2,44 +2,24 @@
 
 ## Overview
 
-This Python script, `array_processing.py`, explores the time complexity of the `process_array` function under different scenarios. The script generates arrays of varying sizes and compositions to analyze processing time for best-case, average-case, and worst-case inputs.
+This program implements a parallel machine processing simulation using MPI4py. It simulates the processing of products through a network of machines, each performing specific operations. The code is designed to run in a parallelized environment using MPI for efficient parallel processing.
 
-## Function Details 
+## Requirements
+- Python 3.x
+- MPI4py library
 
-The core of the analysis lies in the `process_array` function. It navigates through an input array, employing nested loops and conditional statements to perform various operations. The goal is to understand the time complexity implications of the function.
-
-## Input Arrays
-
-1. Best-case scenario:
-- Array filled with zeros.
-2. Average-case scenario:
-- Randomly generated arrays with elements 0, 1, or 2.
-3. Worst-case scenario:
-- Array filled with ones.
 
 ## How to Run
 
 1. Ensure Python is installed on your system.
-2. Run the script using the command: `python3 array_processing.py`.
+2. Firstly `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` writing this to the terminal, install Homebrew
+3. Then `brew install python`
+4. Then `brew install open-mpi`
+5. After that, `pip3 install mpi4py`
+6. Run the script using the command in the file path: `mpiexec -n <number_of_processes> python your_code.py input.txt output.txt`
+7. If it is oversubscribe: `mpiexec --oversubscribe -n <NUMBER> python3 test.py test_input.txt output.txt`. NUMBER refers to number of machine + 1 you will use.
 
-## Results
 
-The script outputs elapsed time for processing arrays of different sizes and scenarios, including best-case, average-case, and worst-case scenarios.
-
-## Interpreting Results
-
-- Elapsed time provides insights into the time complexity of the process_array function.
-- Compare times across scenarios and array sizes to gauge performance implications.
-
-## Dependencies
-
-- `time` module for measuring elapsed time.
-- `random` module for generating random arrays in the average-case scenario.
-
-## Usage Tips
-
-- Experiment with various array sizes to observe how the function's performance scales.
-- Modify the `process_array` function for alternative time complexity analyses.
 
 Feel free to explore and adapt this script for your specific use cases and performance analysis needs.
 
